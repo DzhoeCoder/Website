@@ -1,0 +1,198 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Background Video */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Container Utama */
+.container {
+    background: rgba(0, 0, 0, 0.7); /* Latar belakang transparan */
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 90%; /* Lebar container disesuaikan untuk ponsel */
+    width: 100%;
+    backdrop-filter: blur(10px); /* Efek blur */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Upload Section */
+#upload-section {
+    margin-bottom: 15px;
+}
+
+.file-upload-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 14px; /* Ukuran font diperkecil */
+}
+
+.file-upload-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Animasi sentuhan */
+}
+
+.file-upload-btn input[type="file"] {
+    display: none;
+}
+
+/* Buttons */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 14px; /* Ukuran font diperkecil */
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Animasi sentuhan */
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Style List */
+#style-list {
+    display: flex;
+    flex-direction: column; /* Susun vertikal */
+    gap: 8px; /* Jarak antar tombol diperkecil */
+    align-items: center;
+    max-height: 200px; /* Tinggi maksimal daftar style */
+    overflow-y: auto; /* Scroll jika daftar terlalu panjang */
+    padding: 10px;
+}
+
+.style-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px; /* Padding diperkecil */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 90%; /* Lebar tombol disesuaikan */
+    font-size: 14px; /* Ukuran font diperkecil */
+}
+
+.style-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05); /* Animasi sentuhan */
+}
+
+/* Result Section */
+#result-section {
+    margin-top: 15px;
+}
+
+#result-images img {
+    max-width: 80%; /* Ukuran gambar diperkecil */
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Tombol Unduh */
+#download-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 14px;
+}
+
+#download-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+#download-btn.hidden {
+    display: none;
+}
+
+/* Loading Animation */
+#loading {
+    margin-top: 15px;
+}
+
+.loader {
+    border: 4px solid #f3f3f3; /* Border diperkecil */
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    width: 30px; /* Ukuran loader diperkecil */
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px; /* Padding diperkecil untuk ponsel */
+    }
+
+    h1 {
+        font-size: 24px; /* Ukuran font judul diperkecil */
+    }
+
+    h2 {
+        font-size: 18px; /* Ukuran font subjudul diperkecil */
+    }
+
+    .file-upload-btn, button, .style-btn {
+        padding: 6px 12px; /* Padding tombol diperkecil */
+        font-size: 12px; /* Ukuran font tombol diperkecil */
+    }
+
+    #style-list {
+        max-height: 150px; /* Tinggi maksimal daftar style diperkecil */
+    }
+
+    #result-images img {
+        max-width: 70%; /* Ukuran gambar diperkecil lagi */
+    }
+}
