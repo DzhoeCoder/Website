@@ -39,7 +39,7 @@ body {
 .theme-toggle {
     position: fixed;
     top: 1.5rem;
-    right: 2rem;
+    right: 1.5rem; /* Tetap di kanan */
     z-index: 1001;
     cursor: pointer;
     width: 50px;
@@ -72,7 +72,6 @@ body {
     background: white;
     border-radius: 50%;
     transition: transform 0.3s ease;
-    will-change: transform;
 }
 
 html.dark .theme-toggle-circle {
